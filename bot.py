@@ -6,21 +6,22 @@ from random import randint,random
 import time
 import json
 
+
 print("Use api_id,api_hash,text from last session?\n (y/n)")
 check=input().lower()
 
 if check=="n":
     data={}
     print("Write API ID:")
-    api_id=input()#"20125349"
+    api_id=input()
     data["api_id"]=api_id
     
     print("Write API HASH:")
-    api_hash=input()#"518eccca0c9148610bb6de763e1f1039"
+    api_hash=input()
     data["api_hash"]=api_hash
 
     print("Write Text:")
-    mes_text=input()#"hello"
+    mes_text=input()
     data['text']=mes_text
 
     with open("data\\config.json","w", encoding="utf-8") as file :
